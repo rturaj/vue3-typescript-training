@@ -11,6 +11,7 @@ export default function generateEmployees(employeesNumber = 20): Employee[] {
     })
     const item: Employee = {
       id: faker.datatype.uuid(),
+      avatar: faker.image.avatar(),
       firstName: faker.name.firstName(),
       lastName: faker.name.lastName(),
       position: faker.name.jobTitle(),

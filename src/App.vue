@@ -1,21 +1,19 @@
 <template>
-  <div>
-    {{ employees }}
+  <div class="flex">
+    <div class="w-full md:w-1/2">
+      <employees />
+    </div>
+    <div class="w-full md:w-1/2"></div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import generateEmployees from './data/generateEmployees';
+import Employees from './components/Employees/index.vue';
 
 export default defineComponent({
   name: 'App',
-  components: {},
-  setup() {
-    const employees = generateEmployees();
-    console.log(employees);
-    return { employees };
-  },
+  components: { Employees },
 });
 </script>
 

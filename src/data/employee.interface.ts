@@ -6,6 +6,7 @@ export interface Task {
 }
 export interface Employee {
   id: string,
+  avatar: string,
   firstName: string,
   lastName: string,
   position: string
