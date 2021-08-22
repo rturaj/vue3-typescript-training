@@ -5,6 +5,7 @@ interface EmployeesState {
   activeEmployee: Employee
 }
 export default {
+  namespaced: true,
   state: {
     employees: generateEmployees(20),
     activeEmployee: null

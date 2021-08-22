@@ -1,6 +1,6 @@
 import { computed, ComputedRef, reactive } from "vue";
 
-export default function useSearch<T>(initItems: T[]): { items: ComputedRef<any[]>, setParams: (providedParams: Partial<T>) => void } {
+export default function useSearch<T>(initItems: T[]): { items: ComputedRef<T[]>, setParams: (providedParams: Partial<T>) => void } {
   const params: Partial<T> = reactive({});
   const items = computed(() => {
     let result: T[] = [...initItems];
