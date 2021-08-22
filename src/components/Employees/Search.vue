@@ -1,8 +1,8 @@
 <template>
   <div class="flex shadow p-4 mb-4">
-    <app-input label="firstname" v-model="firstName" />
-    <app-input label="lastname" v-model="lastName" />
-    <app-input label="position" v-model="position" />
+    <app-input label="Firstname" v-model="firstName" />
+    <app-input label="Lastname" v-model="lastName" />
+    <app-input label="Position" v-model="position" />
   </div>
 </template>
 

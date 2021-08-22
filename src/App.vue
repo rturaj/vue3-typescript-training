@@ -1,10 +1,10 @@
 <template>
   <div class="flex">
     <div class="w-full md:w-1/2">
-      <employees :employees="employees" />
+      <employees />
     </div>
     <div class="w-full md:w-1/2">
-      <tasks :activeEmployee="activeEmployee" v-if="activeEmployee.id" :key="activeEmployee.id" />
+      <tasks :activeEmployee="activeEmployee" v-if="activeEmployee" :key="activeEmployee.id" />
     </div>
   </div>
 </template>

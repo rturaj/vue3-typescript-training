@@ -1,6 +1,6 @@
 <template>
   <div class="flex shadow p-4 mb-4">
-    <app-input label="name" v-model="name" />
+    <app-input label="Name" v-model="name" />
   </div>
 </template>
 
