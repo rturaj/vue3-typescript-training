@@ -9,23 +9,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from '@vue/runtime-core';
+import { defineComponent } from '@vue/runtime-core';
 import Item from './Item.vue';
 import Search from './Search.vue';
 import useSearch from '@/hooks/search';
 import { Employee } from '@/data/employee.interface';
-import generateEmployees from '@/data/generateEmployees';
+import { useStore } from 'vuex';
 
 export default defineComponent({
-  props: {
-    employees: {
-      type: Array as PropType<Employee[]>,
-    },
-  },
   components: { Item, Search },
   setup() {
-    const employees = generateEmployees(1000);
-    const { items, setParams } = useSearch<Employee>(employees);
+    const store = useStore();
+    const { items, setParams } = useSearch<Employee>(store.state.employees.employees);
     return { items, setParams };
   },
 });
