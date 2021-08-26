@@ -1,6 +1,6 @@
 import { Employee } from "@/data/employee.interface";
 import generateEmployees from "@/data/generateEmployees";
-interface EmployeesState {
+export interface EmployeesState {
   employees: Employee[],
   activeEmployee: Employee
 }

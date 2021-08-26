@@ -1,9 +1,9 @@
 <template>
   <div class="px-8 md:border-r border-grey ">
-    <h2 class="my-4 text-3xl font-semibold text-center ">Employees</h2>
+    <h2 class="my-4 text-3xl font-semibold text-center">Employees</h2>
     <Search @search="setParams" />
-    <div class="flex flex-wrap">
-      <Item v-for="employee in items" :key="employee.id" :employee="employee" />
+    <div class="flex flex-wrap" data-test="list">
+      <Item v-for="employee in items" :key="employee.id" :employee="employee" data-test="item" />
     </div>
   </div>
 </template>
