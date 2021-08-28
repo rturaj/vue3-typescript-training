@@ -10,7 +10,6 @@ describe('Employees/index.vue', () => {
   })
 
   test('renders Item components with correct length', async () => {
-    expect(wrapper.findComponent({ name: 'Search' }).exists()).toBe(true);
     const { employees: { employees } } = store.state as { employees: EmployeesState };
     expect(wrapper.findAllComponents({ name: 'Item' })).toHaveLength(employees.length);
   })

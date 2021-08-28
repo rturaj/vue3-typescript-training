@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils'
 import Search from './Search.vue'
 import faker from 'faker';
 
-describe('Employees/Search.vue', () => {
+describe('Tasks/Search.vue', () => {
   const wrapper = mount(Search);
 
   test('renders', async () => {

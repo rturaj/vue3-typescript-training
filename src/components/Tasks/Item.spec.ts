@@ -4,7 +4,7 @@ import { generateSingleTask } from '@/data/generateEmployees';
 import store from '@/store/index';
 
 
-describe('Employees/Item.vue', () => {
+describe('Tasks/Item.vue', () => {
   const task = generateSingleTask();
   const wrapper = mount(Item, { global: { plugins: [store] }, props: { task } })
 
