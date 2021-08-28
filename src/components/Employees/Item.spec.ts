@@ -1,10 +1,10 @@
 import { mount } from '@vue/test-utils'
 import Item from './Item.vue'
 import store from '@/store/index';
-import { generateSingle } from '@/data/generateEmployees';
+import { generateSingleEmployee } from '@/data/generateEmployees';
 
 describe('Employees/Item.vue', () => {
-  const employee = generateSingle();
+  const employee = generateSingleEmployee();
   const wrapper = mount(Item, { global: { plugins: [store] }, props: { employee } })
 
   test('renders', async () => {

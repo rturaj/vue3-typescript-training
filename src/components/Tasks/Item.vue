@@ -4,9 +4,11 @@
     @click="toggleCompleted"
   >
     <h3 class="font-semibold text-lg">{{ task.name }}</h3>
-    <p>Deadline: {{ formattedDeadline }}</p>
-    <p v-if="task.completed" class="text-green font-bold text-sm mt-2">completed</p>
-    <p v-else class="text-red font-bold text-sm mt-2">uncompleted</p>
+    <p data-test="deadline">Deadline: {{ formattedDeadline }}</p>
+    <p data-test="status" v-if="task.completed" class="text-green font-bold text-sm mt-2">
+      completed
+    </p>
+    <p data-test="status" v-else class="text-red font-bold text-sm mt-2">uncompleted</p>
   </div>
 </template>
 
