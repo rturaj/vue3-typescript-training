@@ -3,7 +3,7 @@ import Index from './index.vue'
 import store from '@/store/index';
 import { EmployeesState } from '@/store/employees';
 describe('Employees/index.vue', () => {
-  const wrapper = shallowMount(Index, { global: { provide: { store } } })
+  const wrapper = shallowMount(Index, { global: { plugins: [store] } })
 
   test('renders Search component', async () => {
     expect(wrapper.findComponent({ name: 'Search' }).exists()).toBe(true);
